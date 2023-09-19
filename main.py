@@ -1,3 +1,6 @@
-from controller.control import runRobot
+from controller.control import Robot
 
-runRobot()
+robot = Robot()
+
+robot.run()
+
