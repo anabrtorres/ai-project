@@ -1,0 +1,6 @@
+0 branco
+1 vermelho
+2 verde
+3 amarelo
+4 azul
+5 laranja

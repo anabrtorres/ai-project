@@ -1,41 +1,10 @@
-dataset = {
-  "hello": {
-    "keys": [
-      "oi",
-      "olá",
-      "ola",
-      "opa",
-      "eae",
-    ],
-    "responses": [
-      "Olá, como vai?",
-      "Oi, tudo bem?",
-      "Olá, tudo bem?"
-    ],
-    "actions": ["say"]
-  },
-  "bye": {
-    "keys": [
-      "tchau",
-      "xau",
-      "bye",
-      "adeus"
-    ],
-    "responses": [
-      "Tchau, até mais!",
-      "Até mais!",
-      "Tchau, volte sempre!"
-    ],
-    "actions": ["say", "stop"]
-  },
-  "photo" : {
-    "keys": [
-      "foto",
-      "captura",
-    ],
-    "responses": [
-      ""
-    ],
-    "actions": ["see"]
-  }
-}
+import os
+import json
+
+
+with open(
+    os.path.join(os.getcwd(), "model/dataset.json"), "r", encoding="utf-8"
+) as file:
+    dataset = json.load(file)
+
+print(dataset)

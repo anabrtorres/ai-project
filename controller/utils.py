@@ -1,6 +1,8 @@
 import random
 
-def getRandomIndice(arr):
+
+def get_random_indice_from_array(arr):
+    """Return a random indice from array"""
     if not arr:
         return None
 
