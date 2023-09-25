@@ -22,15 +22,15 @@ class Audio:
         print(callback)
         self.thread_audio = threading.Thread(target=self._listening, args=(callback,))
         self.thread_audio.start()
+        self.thread_audio.join()
 
     def stop_listening(self):
         self.close_program = True
-        self.thread_audio.join()
 
     def _listening(self, callback):
         while not self.close_program:
-            stt = self.speech_to_text()
-            # stt = input("Text: ")
+            # stt = self.speech_to_text()
+            stt = input("Text: ")
             print(stt, self.close_program)
 
             callback(stt)
@@ -53,5 +53,5 @@ class Audio:
 
     def text_to_speech(self, phrase):
         tts = gTTS(text=phrase, lang="pt-br")
-        tts.save("resposta.mp3")
-        os.system("mpg321 resposta.mp3")
+        tts.save("response.mp3")
+        os.system("mpg321 response.mp3")

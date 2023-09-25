@@ -1,41 +1,72 @@
 {
-  "hello": {
-    "keys": [
-      "oi",
-      "olá",
-      "ola",
-      "opa",
-      "eae"
-    ],
-    "responses": [
-      "Olá, como vai?",
-      "Oi, tudo bem?",
-      "Olá, tudo bem?"
-    ],
-    "actions": ["say"]
-  },
-  "bye": {
-    "keys": [
-      "tchau",
-      "xau",
-      "bye",
-      "adeus"
-    ],
-    "responses": [
-      "Tchau, até mais!",
-      "Até mais!",
-      "Tchau, volte sempre!"
-    ],
-    "actions": ["say", "stop"]
-  },
-  "photo" : {
-    "keys": [
-      "foto",
-      "captura"
-    ],
-    "responses": [
-      ""
-    ],
-    "actions": ["see"]
-  }
+    "greetings": {
+        "prompt": [
+            "oi",
+            "ol\u00e1",
+            "ola",
+            "opa",
+            "eae",
+            "tudo bem"
+        ],
+        "responses": [
+            "Ol\u00e1, como vai?",
+            "Oi, tudo bem?",
+            "Ol\u00e1, tudo bem?",
+            "Tudo bem e voc\u00ea?"
+        ],
+        "actions": [
+            "say"
+        ]
+    },
+    "goodbyes": {
+        "prompt": [
+            "tchau",
+            "xau",
+            "bye",
+            "adeus"
+        ],
+        "responses": [
+            "Tchau, at\u00e9 mais!",
+            "At\u00e9 mais!",
+            "Tchau, volte sempre!"
+        ],
+        "actions": [
+            "say",
+            "stop"
+        ]
+    },
+    "products": {
+        "prompt": [
+            "produto",
+            "foto",
+            "que produto \u00e9 esse?",
+            "que produto \u00e9 esse"
+        ],
+        "responses": [
+            "",
+            "",
+            "Este produto \u00e9 chamado XYZ e \u00e9 um produto de alta qualidade que atende \u00e0s necessidades dos clientes.",
+            "Esse produto \u00e9 um exemplo de como funciona a API do chatbot."
+        ],
+        "actions": [
+            "recognize"
+        ]
+    },
+    "other": {
+        "prompt": [
+            "qual a dist\u00e2ncia entre a terra e o sol",
+            "que dia \u00e9 hoje",
+            "quantos dias tem um ano?",
+            "quantas faces tem um cubo"
+        ],
+        "responses": [
+            "A dist\u00e2ncia m\u00e9dia entre a Terra e o Sol \u00e9 de cerca de 149,6 milh\u00f5es de quil\u00f4metros.",
+            "Hoje \u00e9 29 de outubro.",
+            "Um ano tem 365 dias, e em anos bissextos tem 366 dias.",
+            "Um cubo tem 6 faces"
+        ],
+        "actions": [
+            "say"
+        ]
+    }
 }

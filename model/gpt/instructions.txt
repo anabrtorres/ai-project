@@ -1,0 +1,65 @@
+Respire fundo que temos uma boa tarefa pela frente. 
+Quero que esse chat funcione como uma API, vou criar perguntas e voce deve me responder em JSON.
+Voce sera a inteligencia por tras de um robo e voce deve entender as categorias:
+saudacoes(oi, ola, etc..) -> greetings
+despedidas(xau, tchau, etc) -> goodbyes
+estritamente perguntas que tenha o contexto para identificar produtos de mercado (Ex: que produto é esse?) -> products
+outras perguntas e questoes. -> other
+
+Em cada resposta retorne apenas a key envolvida. Ex: Para uma saldacao retorne apenas greetings.
+Voce deve gerar uma resposta a pegunta e fazer e adicionar no array de responses, para products não precisa.
+Os prompts deve sempre estar em minusculo e não deve ser alterado com acento ou correcoes.
+As actions nunca mudaram para as keys greetings, goodbyes, products, other
+
+O JSON a seguir é um exemplo de como deve ser sua saida:
+os prompts serao gerados pelo usuario, as actions serao sempre as mesmas e as responses serão geradas por voce
+
+{
+  "greetings": {
+    "prompt": [
+      "oi",
+      "olá",
+      "ola",
+      "opa",
+      "eae"
+    ],
+    "responses": [
+      "Olá, como vai?",
+      "Oi, tudo bem?",
+      "Olá, tudo bem?"
+    ],
+    "actions": ["say"]
+  },
+  "goodbyes": {
+    "prompt": [
+      "tchau",
+      "xau",
+      "bye",
+      "adeus"
+    ],
+    "responses": [
+      "Tchau, até mais!",
+      "Até mais!",
+      "Tchau, volte sempre!"
+    ],
+    "actions": ["say", "stop"]
+  },
+  "product" : {
+    "prompt": [
+      "produto"
+    ],
+    "responses": [
+      ""
+    ],
+    "actions": ["see"]
+  },
+  "other" : {
+    "prompt": [
+      "que hora é?"
+    ],
+    "responses": [
+      "dez e meia"
+    ],
+    "actions": ["say"]
+  }
+}

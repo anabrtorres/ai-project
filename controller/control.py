@@ -3,7 +3,7 @@ import numpy as np
 from controller.utils import get_random_indice_from_array
 from view.audio import Audio
 from view.vision import Vision
-from model.dataset import dataset
+from model.dataset import dataset, create_answer
 from model.ia.ia import model, class_names
 
 
@@ -25,26 +25,40 @@ class Robot:
     def recognize_audio(self, phrase):
         if phrase is not None:
             phrase = phrase.lower()
+            hasPhrase = False
             for key in dataset:
-                if phrase in dataset[key]["keys"]:
+                if phrase in dataset[key]["prompt"]:
+                    hasPhrase = True
                     if "say" in dataset[key]["actions"]:
-                        self.say(
-                            dataset[key]["responses"][
-                                get_random_indice_from_array(dataset[key]["responses"])
-                            ]
-                        )
+                        if key != "other":
+                            self.say(
+                                dataset[key]["responses"][
+                                    get_random_indice_from_array(
+                                        dataset[key]["responses"]
+                                    )
+                                ]
+                            )
+                        else:
+                            phraseIndex = dataset[key]["prompt"].index(phrase)
+                            self.say(dataset[key]["responses"][phraseIndex])
 
-                    if "see" in dataset[key]["actions"]:
-                        self.see()
+                    if "recognize" in dataset[key]["actions"]:
+                        result = self.recognize_imagem()
+                        self.say(f"isto é {result}")
 
                     if "stop" in dataset[key]["actions"]:
                         self.stop()
+
+            if not hasPhrase:
+                print("create", phrase)
+                create_answer(phrase)
+                self.recognize_audio(phrase)
 
     def say(self, phrase):
         print(phrase)
         self.audio.text_to_speech(phrase)
 
-    def see(self):
+    def recognize_imagem(self):
         frame = self.vision.read_frame()
         self.vision.save_image(frame)
 
@@ -64,6 +78,11 @@ class Robot:
         # Print prediction and confidence score
         print("Class:", class_name[2:], end="")
         print("Confidence Score:", str(np.round(confidence_score * 100))[:-2], "%")
+
+        if confidence_score > 0.5:
+            return class_name[2:]
+
+        return "Nao foi possivel reconhecer o produto"
 
     def stop(self):
         self.close_program = True
