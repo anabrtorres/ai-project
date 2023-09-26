@@ -19,6 +19,22 @@ O projeto inclui o uso da câmera para a visão do robô, com reconhecimento de 
     - products: Reconhece produtos na imagem da câmera e responde com fala.
     - other: Responde a perguntas utilizando a API do Chat GPT.
 
+### Arquitetura
+
+A arquitetura utilizada é o <b>MVC</b> que se divide em três componentes principais:
+
+- Model
+    - Modelo <b>Keras</b> com <b>Tensorflow</b> para reconhecimento de imagens
+    - <b>Chat GPT</b> para entender e gerar respostas e ações de forma inteligente
+    - <b>Dataset</b> que combina respostas e ações existentes com dados da API do Chat GPT
+- View
+    - <b>Visão</b>: Utiliza da camera.
+    - <b>Áudio</b>: Reconhecimento de voz e fala.
+- Controller
+    - <b>Controle de entrada</b>: Recebe os comandos e prompts do usuário por entrada de voz.
+    - <b>Controle de saida</b>: Responsável por exibir as respostas geradas pelos modelos de IA ao usuário na CLI ou por meio de feedback de áudio.
+    - <b>Controle de ações</b>: Realiza ações com base nas respostas ou comandos, como reconhecer um produto pela camera, ação de fala, ou finalizar o programa.
+
 
 ### Tecnologias Utilizadas
 - <a href="https://www.tensorflow.org/?hl=pt-br">TensorFlow</a>: Utilizado para o reconhecimento de objetos a partir da visão do robô pela câmera.
