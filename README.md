@@ -1,5 +1,8 @@
-# Sem nome
-Trabalho Pratico da Disciplina de Inteligência Artificial - GCC128 (UFLA)
+<h1 align="center">
+    ShopBot
+</h1>
+<p align="center"> Trabalho Pratico da Disciplina de Inteligência Artificial - GCC128 (UFLA) </p>
+
 
 ## Robô Social com Interação Humana usando Modelo Arquitetônico Sentir-Pensar-Agir
 
@@ -7,7 +10,7 @@ O projeto tem como objetivo atender às necessidades de pessoas com deficiência
 
 O projeto inclui o uso da câmera para a visão do robô, com reconhecimento de objetos utilizando TensorFlow. Para a comunicação com o robô, são utilizados o microfone e autofalantes, junto com as bibliotecas speech_recognition (fala em texto) e gTTS (texto em fala).
 
-### Funcionalidades
+## Funcionalidades
 - Visão: Utilização de uma câmera para a visão do robô, com reconhecimento de objetos implementado usando TensorFlow.
 
 - Comunicação: O robô utiliza um microfone e alto-falantes para a interação. A comunicação de voz é convertida em texto com a biblioteca speech_recognition, e o texto é convertido em fala usando a gTTS.
@@ -19,7 +22,7 @@ O projeto inclui o uso da câmera para a visão do robô, com reconhecimento de 
     - products: Reconhece produtos na imagem da câmera e responde com fala.
     - other: Responde a perguntas utilizando a API do Chat GPT.
 
-### Arquitetura
+## Arquitetura
 
 A arquitetura utilizada é o <b>MVC</b> que se divide em três componentes principais:
 
@@ -36,7 +39,7 @@ A arquitetura utilizada é o <b>MVC</b> que se divide em três componentes princ
     - <b>Controle de ações</b>: Realiza ações com base nas respostas ou comandos, como reconhecer um produto pela camera, ação de fala, ou finalizar o programa.
 
 
-### Tecnologias Utilizadas
+## Tecnologias Utilizadas
 - <a href="https://www.tensorflow.org/?hl=pt-br">TensorFlow</a>: Utilizado para o reconhecimento de objetos a partir da visão do robô pela câmera.
 
 - <a href="https://pypi.org/project/SpeechRecognition/">speech_recognition</a>: Biblioteca para converter fala em texto para comunicação com o robô.
@@ -45,7 +48,7 @@ A arquitetura utilizada é o <b>MVC</b> que se divide em três componentes princ
 
 - <a href="https://platform.openai.com/docs/guides/gpt">openai</a>: Categorização e respostas para as falas que o robo escutar com a API do Chat GPT.
 
-### Como Executar
+## Instalação
 
 1 . Clone este repositório.
 ```
@@ -62,7 +65,6 @@ pip install -r requirements.txt
 ```
 cp config_secret.py # veja config_secret.exemple.py
 ```
-
 
 4. Execute o programa.
 ```
