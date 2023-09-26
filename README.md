@@ -3,7 +3,7 @@ Trabalho Pratico da Disciplina de Inteligência Artificial - GCC128 (UFLA)
 
 ## Robô Social com Interação Humana usando Modelo Arquitetônico Sentir-Pensar-Agir
 
-O objetivo deste projeto de Inteligência Artificial (IA) é prototipar um robô social capaz de interagir com seres humanos de forma autônoma e natural. O projeto se baseará no modelo arquitetônico "Sentir-Pensar-Agir", que permite que o robô perceba seu ambiente, processe informações e tome decisões, adaptando seu comportamento de acordo com as interações com os humanos.
+O projeto tem como objetivo atender às necessidades de pessoas com deficiência visual, oferecendo um assistente robótico capaz de auxiliá-las na identificação de produtos em supermercados. Com isso vamos prototipar um robô social capaz de interagir com seres humanos de forma autônoma e natural. O projeto se baseará no modelo arquitetônico "Sentir-Pensar-Agir", que permite que o robô perceba seu ambiente, processe informações e tome decisões, adaptando seu comportamento de acordo com as interações com os humanos.
 
 O projeto inclui o uso da câmera para a visão do robô, com reconhecimento de objetos utilizando TensorFlow. Para a comunicação com o robô, são utilizados o microfone e autofalantes, junto com as bibliotecas speech_recognition (fala em texto) e gTTS (texto em fala).
 
@@ -12,7 +12,7 @@ O projeto inclui o uso da câmera para a visão do robô, com reconhecimento de 
 
 - Comunicação: O robô utiliza um microfone e alto-falantes para a interação. A comunicação de voz é convertida em texto com a biblioteca speech_recognition, e o texto é convertido em fala usando a gTTS.
 
-- Tomada de Decisões: As decisões do robô são baseadas em categorias predefinidas:
+- Tomada de Decisões: As decisões do robô são baseadas na fala do usuario e estão em categorias predefinidas:
 
     - greetings: Responde cumprimentos com fala.
     - goodbyes: Responde a despedidas com fala e encerra o programa.
