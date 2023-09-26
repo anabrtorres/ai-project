@@ -4,7 +4,10 @@ from config_secret import OPENAI_API_KEY
 
 openai.api_key = OPENAI_API_KEY
 
-with open(os.path.join(os.getcwd(), "model/gpt/instructions.txt"), "r") as arquivo:
+path_to_instructions = "model/gpt/instructions.txt"
+path_to_last_response = "model/gpt/last_response.txt"
+
+with open(os.path.join(os.getcwd(), path_to_instructions), "r") as arquivo:
     instructions = arquivo.read()
 
 
@@ -16,4 +19,10 @@ def gpt3_generate_text(prompt):
             {"role": "user", "content": prompt},
         ],
     )
-    return response["choices"][0]["message"]["content"]
+
+    content = response["choices"][0]["message"]["content"]
+
+    with open(os.path.join(os.getcwd(), path_to_last_response), "w") as file:
+        json.dump(content, file, indent=4)
+
+    return content
