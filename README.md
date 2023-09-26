@@ -72,5 +72,5 @@ python3 main.py
 ```
 
 
-### Contribuição
+## Contribuição
 Contribuições são bem-vindas! Para qualquer melhoria ou correção de bugs, sinta-se à vontade para abrir uma issue ou enviar um pull request.
