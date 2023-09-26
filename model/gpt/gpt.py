@@ -1,11 +1,12 @@
 import os
+import json
 import openai
 from config_secret import OPENAI_API_KEY
 
 openai.api_key = OPENAI_API_KEY
 
 path_to_instructions = "model/gpt/instructions.txt"
-path_to_last_response = "model/gpt/last_response.txt"
+path_to_last_response = "model/gpt/last_response.json"
 
 with open(os.path.join(os.getcwd(), path_to_instructions), "r") as arquivo:
     instructions = arquivo.read()
@@ -26,3 +27,6 @@ def gpt3_generate_text(prompt):
         json.dump(content, file, indent=4)
 
     return content
+
+
+# print(gpt3_generate_text("Ola"))

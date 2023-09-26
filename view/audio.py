@@ -31,7 +31,7 @@ class Audio:
         while not self.close_program:
             # stt = self.speech_to_text()
             stt = input("Text: ")
-            print(stt, self.close_program)
+            print("stt: ", stt)
 
             callback(stt)
 

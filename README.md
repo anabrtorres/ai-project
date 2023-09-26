@@ -42,7 +42,13 @@ cd seu-repositorio
 pip install -r requirements.txt
 ```
 
-3. Execute o programa.
+3. Crie um arquivo com as chaves.
+```
+cp config_secret.py # veja config_secret.exemple.py
+```
+
+
+4. Execute o programa.
 ```
 python3 main.py
 ```

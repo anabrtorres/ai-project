@@ -1,18 +1,20 @@
 {
     "greetings": {
         "prompt": [
-            "oi",
-            "ol\u00e1",
             "ola",
+            "oi",
             "opa",
             "eae",
-            "tudo bem"
+            "como esta",
+            "tiau"
         ],
         "responses": [
-            "Ol\u00e1, como vai?",
-            "Oi, tudo bem?",
-            "Ol\u00e1, tudo bem?",
-            "Tudo bem e voc\u00ea?"
+            "Ola! Como posso ajudar?",
+            "Ol\u00e1!",
+            "Ol\u00e1!",
+            "Ol\u00e1!",
+            "Estou bem, obrigado por perguntar",
+            "Ol\u00e1! Como posso te ajudar?"
         ],
         "actions": [
             "say"
@@ -20,15 +22,14 @@
     },
     "goodbyes": {
         "prompt": [
-            "tchau",
             "xau",
-            "bye",
-            "adeus"
+            "tchau",
+            "tchau tchau"
         ],
         "responses": [
-            "Tchau, at\u00e9 mais!",
-            "At\u00e9 mais!",
-            "Tchau, volte sempre!"
+            "at\u00e9 mais",
+            "At\u00e9 mais, at\u00e9 logo!",
+            "at\u00e9 mais"
         ],
         "actions": [
             "say",
@@ -37,16 +38,13 @@
     },
     "products": {
         "prompt": [
+            "que produto \u00e9 esse",
             "produto",
-            "foto",
-            "que produto \u00e9 esse?",
-            "que produto \u00e9 esse"
+            "me ajude a identificar esse produto"
         ],
         "responses": [
-            "",
-            "",
-            "Este produto \u00e9 chamado XYZ e \u00e9 um produto de alta qualidade que atende \u00e0s necessidades dos clientes.",
-            "Esse produto \u00e9 um exemplo de como funciona a API do chatbot."
+            "Desculpe, n\u00e3o consigo identificar o produto sem uma imagem.",
+            "Qual \u00e9 a sua pergunta sobre produtos?"
         ],
         "actions": [
             "recognize"
@@ -54,16 +52,35 @@
     },
     "other": {
         "prompt": [
-            "qual a dist\u00e2ncia entre a terra e o sol",
             "que dia \u00e9 hoje",
-            "quantos dias tem um ano?",
-            "quantas faces tem um cubo"
+            "que dia e hoje"
         ],
         "responses": [
-            "A dist\u00e2ncia m\u00e9dia entre a Terra e o Sol \u00e9 de cerca de 149,6 milh\u00f5es de quil\u00f4metros.",
-            "Hoje \u00e9 29 de outubro.",
-            "Um ano tem 365 dias, e em anos bissextos tem 366 dias.",
-            "Um cubo tem 6 faces"
+            "Hoje \u00e9 ter\u00e7a-feira, dia 22 de junho de 2021."
+        ],
+        "actions": [
+            "say"
+        ]
+    },
+    "error": {
+        "prompt": [
+            "",
+            "prdotuos"
+        ],
+        "responses": [
+            "N\u00e3o entendi, poderia repetir?",
+            "Desculpe, n\u00e3o entendi a pergunta."
+        ],
+        "actions": [
+            "say"
+        ]
+    },
+    "unrecognizable": {
+        "prompt": [
+            ""
+        ],
+        "responses": [
+            "N\u00e3o foi possivel reconhecer o produto!"
         ],
         "actions": [
             "say"
